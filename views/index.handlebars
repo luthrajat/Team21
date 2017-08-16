@@ -1,0 +1,112 @@
+Last login: Tue Aug 15 21:22:41 on ttys002
+RajatlMBA:Team21 bootcamp$ cd ./
+.gameserver.js.swp  config/             gameserver.js       models/             package.json        
+RajatlMBA:Team21 bootcamp$ cd ../
+.DS_Store  Backend/   Frontend/  GitLab/    Team21/    
+RajatlMBA:Team21 bootcamp$ cd ../
+.DS_Store  Backend/   Frontend/  GitLab/    Team21/    
+RajatlMBA:Team21 bootcamp$ cd ../GitLab/04-2017-Class-Repository/
+.DS_Store                         02-html-css-bootstrap-three-days/ 06-Week/                          11-Week/                          15-Week/
+.git/                             03-intro-js-hangman-dom/          07-Week/                          12-Week/                          README.md
+.gitignore                        04-jquery-rpg/                    08-Week/                          13-Week/                          
+01-html-css-three-days/           05-Week/                          10-Week/                          14-Week/                          
+RajatlMBA:Team21 bootcamp$ cd ../GitLab/04-2017-Class-Repository/14-Week/
+14.1/            14.2/            14.3/            Homework/        StudentGuide.md  Supplemental/    VideoGuide.md    
+RajatlMBA:Team21 bootcamp$ cd ../GitLab/04-2017-Class-Repository/14-Week/14.3/
+14-QuotesAppSolution/ 16-OrmExample/        18-TheAsynchProblem/  20-TheAsynchSolution/ 22-CatsAppProblem/    
+15-QuotesAppStarter/  17-PartyDatabase/     19-CallbackReview/    21-MvcExample/        23-CatsAppSolution/   
+RajatlMBA:Team21 bootcamp$ cd ../GitLab/04-2017-Class-Repository/14-Week/14.3/21-MvcExample/
+config/       controllers/  db/           models/       package.json  public/       server.js     views/        
+RajatlMBA:Team21 bootcamp$ cd ../GitLab/04-2017-Class-Repository/14-Week/14.3/21-MvcExample/
+RajatlMBA:21-MvcExample bootcamp$ ls -alt
+total 16
+drwxr-xr-x  10 bootcamp  staff  340 Aug  3 20:34 .
+drwxr-xr-x  12 bootcamp  staff  408 Aug  3 20:34 ..
+drwxr-xr-x   4 bootcamp  staff  136 Aug  3 20:34 config
+drwxr-xr-x   3 bootcamp  staff  102 Aug  3 20:34 controllers
+drwxr-xr-x   4 bootcamp  staff  136 Aug  3 20:34 db
+drwxr-xr-x   3 bootcamp  staff  102 Aug  3 20:34 models
+-rw-r--r--   1 bootcamp  staff  446 Aug  3 20:34 package.json
+drwxr-xr-x   3 bootcamp  staff  102 Aug  3 20:34 public
+-rw-r--r--   1 bootcamp  staff  747 Aug  3 20:34 server.js
+drwxr-xr-x   4 bootcamp  staff  136 Aug  3 20:34 views
+RajatlMBA:21-MvcExample bootcamp$ cd db/s
+schema.sql  seeds.sql   
+RajatlMBA:21-MvcExample bootcamp$ vim server.js 
+RajatlMBA:21-MvcExample bootcamp$ vim server.js 
+RajatlMBA:21-MvcExample bootcamp$ vim controllers/catsController.js 
+RajatlMBA:21-MvcExample bootcamp$ vim views/
+index.handlebars  layouts/          
+RajatlMBA:21-MvcExample bootcamp$ vim views/index.handlebars
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Cats!</h1>
+
+<h2>Cats that are not sleepy!</h2>
+
+<ul>
+  {{#each cats}}
+    {{#unless this.sleepy}}
+      <li>
+        {{this.name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="sleepy" value="true">
+          <button type="submit">SLEEP TIME!</button>
+        </form>
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Cats that are sleepy!</h2>
+
+<ul>
+  {{#each cats}}
+    {{#if this.sleepy}}
+      <li>
+        {{this.name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="sleepy" value="false">
+          <button type="submit">WAKE UP!</button>
+        </form>
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Cat</h2>
+<form class="create-update-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="ca">Cat Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="slee">Sleepy?</label><br>
+    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
+    <input type="radio" name="sleepy" value="0"> Awake
+  </div>
+
+  <button type="submit">Add Cat</button>
+</form>
+~                                                                                                                                                                                                           
+~                                                                                                                                                                                                           
+~                                                                                                                                                                                                           
+
